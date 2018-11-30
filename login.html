@@ -1,0 +1,76 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+.section{
+  min-height: 100vh; 
+}
+
+#hello{
+	padding: 10px;
+}
+
+.input-field input[type=text]:focus + label {
+     color: #757575 !important;
+}
+
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #757575 !important;
+ box-shadow: 0 1px 0 0 #757575 !important;
+}
+
+.input-field input[type=password]:focus + label {
+     color: #757575 !important;
+}
+
+.input-field input[type=password]:focus {
+ border-bottom: 1px solid #757575 !important;
+ box-shadow: 0 1px 0 0 #757575 !important;
+}
+
+body {
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+</style>
+
+</head>
+
+<body>
+	<div class="section valign-wrapper">
+		<div class="row">
+			<div class="z-depth-5 row grey lighten-5" id='hello'>
+				<div style="padding:0px 100px">
+				<h3 style="color:black" class="center-align">Login</h3>
+				</div>
+				 <div class="row">
+					<form class="col s12">
+					  <div class="row">
+						<div class="input-field col s12">
+						  <input id="name" type="text" class="validate">
+						  <label for="name">Login ID</label>
+						</div>
+					  </div>
+					  <div class="row">
+						<div class="input-field col s12">
+						  <input id="password" type="password" class="validate">
+						  <label for="password">Password</label>
+						</div>
+					  </div>
+					  <button class="btn waves-effect red darken-2" type="submit" name="action">Submit
+						<i class="material-icons">arrow_forward</i>
+					  </button>
+					  <button class="btn waves-effect red darken-2" type="button">Create
+						<i class="material-icons">add</i>
+					  </button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
