@@ -2,9 +2,11 @@
 
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 <style>
 .section{
@@ -41,6 +43,12 @@ body {
 
 </style>
 
+<script>
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>
+
 </head>
 
 <body>
@@ -67,12 +75,43 @@ body {
 					  <button class="btn waves-effect red darken-2" type="submit" name="action">Submit
 						<i class="material-icons">arrow_forward</i>
 					  </button>
-					  <button class="btn waves-effect red darken-2" type="button">Create
-						<i class="material-icons">add</i>
-					  </button>
+					  <!-- Modal Trigger -->
+					  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">New account?
+						<i class="material-icons">add</i></a>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	  <!-- Modal Structure -->
+	  <div id="modal1" class="modal z-depth-5">
+	    <div class="modal-content">
+	      <h4>Create an account</h4>
+			<div>
+				 <div class="row">
+					<form class="col s12">
+					  <div class="row">
+						<div class="input-field col s12">
+						  <input id="name2" type="text" class="validate">
+						  <label for="name2">Login ID</label>
+						</div>
+					  </div>
+					  <div class="row">
+						<div class="input-field col s12">
+						  <input id="password2" type="password" class="validate">
+						  <label for="password2">Password</label>
+						</div>
+					  </div>
+					  <button class="btn waves-effect red darken-2" type="submit" name="action">Submit
+						<i class="material-icons">arrow_forward</i>
+					  </button>
+					</form>
+				</div>
+			</div>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+	    </div>
+	  </div>
 </body>
