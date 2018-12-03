@@ -17,39 +17,41 @@
 </head>
 
 <body>
-	<div class="section valign-wrapper">
-		<div class="row">
-			<div class="z-depth-5 row grey lighten-5" id='hello'>
-				<div style="padding:0px 100px">
-				<h3 style="color:black" class="center-align">Login</h3>
-				</div>
-				 <div class="row">
-					<form class="col s12" action="user.html">
-					  <div class="row">
-						<div class="input-field col s12">
-						  <input id="name" type="text" class="validate">
-						  <label for="name">Login ID</label>
-						</div>
-					  </div>
-					  <div class="row">
-						<div class="input-field col s12">
-						  <input id="password" type="password" class="validate">
-						  <label for="password">Password</label>
-						</div>
-					  </div>
-					  <button class="btn waves-effect red darken-2" type="submit" name="action">Submit
-						<i class="material-icons">arrow_forward</i>
-					  </button>
-					  <!-- Modal Trigger -->
-					  <a class="waves-effect red darken-2 btn modal-trigger" href="#modal1">New account?
-						<i class="material-icons">add</i></a>
-					</form>
+	<main>
+		<div class="section valign-wrapper">
+			<div class="row">
+				<div class="z-depth-5 row grey lighten-5" id='hello'>
+					<div style="padding:0px 100px">
+					<h3 style="color:black" class="center-align">Login</h3>
+					</div>
+					 <div class="row">
+						<form class="col s12" action="user.html">
+						  <div class="row">
+							<div class="input-field col s12">
+							  <input id="name" type="text" class="validate">
+							  <label for="name">Login ID</label>
+							</div>
+						  </div>
+						  <div class="row">
+							<div class="input-field col s12">
+							  <input id="password" type="password" class="validate">
+							  <label for="password">Password</label>
+							</div>
+						  </div>
+						  <button class="btn waves-effect red darken-2" type="submit" name="action">Submit
+							<i class="material-icons">arrow_forward</i>
+						  </button>
+						  <!-- Modal Trigger -->
+						  <a class="waves-effect red darken-2 btn modal-trigger" href="#modal1">New account?
+							<i class="material-icons">add</i></a>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 
-	  <!-- Modal Structure -->
+	  <!-- Account create modal -->
 	  <div id="modal1" class="modal z-depth-5">
 	    <div class="modal-content">
 	      <h4>Create an account</h4>
@@ -68,7 +70,7 @@
 						  <label for="password2">Password</label>
 						</div>
 					  </div>
-					  <button class="btn waves-effect red darken-2" type="submit" name="action">Submit
+					  <button class="btn waves-effect red darken-2" type="button" name="action" id="createAccount">Submit
 						<i class="material-icons">arrow_forward</i>
 					  </button>
 					</form>
