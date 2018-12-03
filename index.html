@@ -1,0 +1,84 @@
+<!-- -->
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="login.css">
+<script src="login.js"></script>
+
+<title>
+	Login Page - Project Name
+</title>
+
+</head>
+
+<body>
+	<main>
+		<div class="section valign-wrapper">
+			<div class="row">
+				<div class="z-depth-5 row grey lighten-5" id='hello'>
+					<div style="padding:0px 100px">
+					<h3 style="color:black" class="center-align">Login</h3>
+					</div>
+					 <div class="row">
+						<form class="col s12" action="user.html">
+						  <div class="row">
+							<div class="input-field col s12">
+							  <input id="name" type="text" class="validate">
+							  <label for="name">Login ID</label>
+							</div>
+						  </div>
+						  <div class="row">
+							<div class="input-field col s12">
+							  <input id="password" type="password" class="validate">
+							  <label for="password">Password</label>
+							</div>
+						  </div>
+						  <button class="btn waves-effect red darken-2" type="submit" name="action">Submit
+							<i class="material-icons">arrow_forward</i>
+						  </button>
+						  <!-- Modal Trigger -->
+						  <a class="waves-effect red darken-2 btn modal-trigger" href="#modal1">New account?
+							<i class="material-icons">add</i></a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	  <!-- Account create modal -->
+	  <div id="modal1" class="modal z-depth-5">
+	    <div class="modal-content">
+	      <h4>Create an account</h4>
+			<div>
+				 <div class="row">
+					<form class="col s12">
+					  <div class="row">
+						<div class="input-field col s12">
+						  <input id="name2" type="text" class="validate">
+						  <label for="name2">Login ID</label>
+						</div>
+					  </div>
+					  <div class="row">
+						<div class="input-field col s12">
+						  <input id="password2" type="password" class="validate">
+						  <label for="password2">Password</label>
+						</div>
+					  </div>
+					  <button class="btn waves-effect red darken-2" type="button" name="action" id="createAccount">Submit
+						<i class="material-icons">arrow_forward</i>
+					  </button>
+					</form>
+				</div>
+			</div>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+	    </div>
+	  </div>
+</body>
