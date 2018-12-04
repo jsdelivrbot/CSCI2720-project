@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 //Schema
 var UserSchema = new mongoose.Schema({
     loginId: {type: String, required: true, unique: true},
-    password: {type: String, required: true},
+    password: {type: String, required: true}
 });
 
 var User = mongoose.model('User', UserSchema);
