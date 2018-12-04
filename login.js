@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $('.modal').modal();
     $('#createAccount').click(function(){
-    	alert("Not ready");
+    	$.post("/test", function(data) {
+			alert(data);
+		});
     });
 });
