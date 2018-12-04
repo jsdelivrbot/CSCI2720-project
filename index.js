@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 5000
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var async = require('async');
+var bcrypt = require('bcryptjs');
 
 //Input Database here
 mongoose.connect('mongodb+srv://csci2720:2720@cluster0-n9g6h.mongodb.net/db2');
@@ -25,7 +26,7 @@ var User = mongoose.model('User', UserSchema);
 app.post('/test',function(req,res){
 	var u = new User({
 		loginId: String(req.body['loginId']),
-		password: String(req.body['password'])
+		password: String(bcrypt.hashSync(req.body['password']))
 	});
 	u.save(function(err){
 		if(err)
