@@ -2,7 +2,8 @@ $(document).ready(function(){
     $('.modal').modal();
     $('#createAccount').click(function(){
     	$.post("/test", {
-    		name: 'User1'
+    		loginId: $('#name2').val(),
+    		password: $('#password2').val()
     	}, function(data) {
 			alert(data);
 		});
