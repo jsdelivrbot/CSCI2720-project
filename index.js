@@ -27,7 +27,7 @@ app.post('/test',function(req,res){
 		loginId: '1234',
 		password: '5678'
 	});
-	e.save(function(err){
+	u.save(function(err){
 		if(err)
 			res.send(err)
 		res.send("Warning! password not hashed at this point Ref: "+req.body['loginId']);
