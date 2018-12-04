@@ -31,7 +31,7 @@ app.post('/test',function(req,res){
 	u.save(function(err){
 		if(err)
 			res.send(err)
-		res.send("Warning! password not hashed at this point Ref: "+req.body['loginId']);
+		res.send("Account created! Login Id: "+req.body['loginId']);
 	});
 });
 
