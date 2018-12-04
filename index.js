@@ -24,8 +24,8 @@ var User = mongoose.model('User', UserSchema);
 //Get Post Delete
 app.post('/test',function(req,res){
 	var u = new User({
-		loginId: req.body['loginId'],
-		password: req.body['password']
+		loginId: '1234',
+		password: '5678'
 	});
 	e.save(function(err){
 		if(err)
