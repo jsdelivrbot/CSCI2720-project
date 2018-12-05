@@ -15,6 +15,7 @@ $(document).ready(function(){
     	$.get("/user.html",function(data){
     		window.history.pushState(null, null, "/user");
     		$("html").html(data);
+    		console.log(data);
     		$.getScript("user.js");
     	});
     });
