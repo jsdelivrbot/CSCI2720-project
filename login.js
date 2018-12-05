@@ -14,9 +14,10 @@ $(document).ready(function(){
     $('#loginButton').click(function(){
     	$.get("/user.html",function(data){
     		window.history.pushState(null, null, "/user");
-    		$("html").replaceWith(data);
-    		console.log(data);
-    		$.getScript("user.js");
+
+		    var newDoc = document.open("text/html", "replace");
+		    newDoc.write(data);
+		    newDoc.close();
     	});
     });
 });
