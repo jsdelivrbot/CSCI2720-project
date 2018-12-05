@@ -41,6 +41,10 @@ app.post('/user',function(req,res){
 	res.sendFile(__dirname + '/user.html');
 });
 
+app.get('/user',function(req,res){
+	res.sendFile(__dirname + '/user.html');
+});
+
 app.use('/', express.static(__dirname + '/'));
 
 app.listen(PORT)
