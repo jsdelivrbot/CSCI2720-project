@@ -12,11 +12,11 @@ $(document).ready(function(){
     });
 
     $('#loginButton').click(function(){
-    	window.history.pushState(null, null, "/user/");
     	$.post("/user", {
 
     	}, function(data) {
 			$(document).load(data)
 		});
+		window.history.pushState(null, null, "/user/");
     });
 });
