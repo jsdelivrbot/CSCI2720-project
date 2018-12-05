@@ -12,11 +12,9 @@ $(document).ready(function(){
     });
 
     $('#loginButton').click(function(){
-    	$.post("/user", {
-
-    	}, function(data) {
-			$(document).load(data)
-			window.history.pushState(null, null, "/user");
-		});
+    	$.get("/user.html",function(data){
+    		$(document).load(data);
+    		window.history.pushState(null, null, "/user");
+    	});
     });
 });
