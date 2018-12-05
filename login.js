@@ -13,11 +13,8 @@ $(document).ready(function(){
 
     $('#loginButton').click(function(){
     	$.get("/user.html",function(data){
-    		console.log(data);
     		$("html").html(data);
+    		 window.history.pushState(null, null, "/user");
     	});
     });
 });
-
-$(document).load(data);
- window.history.pushState(null, null, "/user");
