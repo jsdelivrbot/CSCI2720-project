@@ -16,7 +16,7 @@ $(document).ready(function(){
 
     	}, function(data) {
 			$(document).load(data)
+			window.history.pushState(null, null, "/user/");
 		});
-		window.history.pushState(null, null, "/user/");
     });
 });
