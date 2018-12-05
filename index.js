@@ -38,7 +38,7 @@ app.post('/test',function(req,res){
 });
 
 app.get('/user',function(req,res){
-	res.sendFile(__dirname + 'user.html');
+	res.sendFile('user.html');
 });
 
 app.use('/', express.static(__dirname + '/'));
