@@ -14,6 +14,7 @@ $(document).ready(function(){
     $('#loginButton').click(function(){
     	$.get("/user.html",function(data){
     		window.history.pushState(null, null, "/user");
+    		$.getScript("user.js");
     		$("html").html(data);
     	});
     });
