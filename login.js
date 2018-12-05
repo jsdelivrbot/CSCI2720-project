@@ -1,5 +1,7 @@
 $(document).ready(function(){
+
     $('.modal').modal();
+
     $('#createAccount').click(function(){
     	$.post("/test", {
     		loginId: $('#name2').val(),
@@ -7,5 +9,9 @@ $(document).ready(function(){
     	}, function(data) {
 			alert(data);
 		});
+    });
+
+    $('#loginButton').click(function(){
+    	window.history.pushState(null, null, "/user/");
     });
 });

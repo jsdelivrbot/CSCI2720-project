@@ -23,6 +23,8 @@ var UserSchema = new mongoose.Schema({
 var User = mongoose.model('User', UserSchema);
 
 //Get Post Delete
+
+//Create Account
 app.post('/test',function(req,res){
 	var u = new User({
 		loginId: String(req.body['loginId']),
@@ -33,6 +35,10 @@ app.post('/test',function(req,res){
 			res.send(err)
 		res.send("Account created! Login Id: "+req.body['loginId']);
 	});
+});
+
+app.get('/user',function(req,res){
+	res.sendFile(__dirname + 'user.html');
 });
 
 app.use('/', express.static(__dirname + '/'));
