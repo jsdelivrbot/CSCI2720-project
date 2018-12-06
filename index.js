@@ -38,25 +38,11 @@ app.post('/test',function(req,res){
 		loginId: String(req.body['loginId']),
 		password: String(bcrypt.hashSync(req.body['password']))
 	});
-	var e1 = new Event({
-		eventName: "test",
-		date: "9-9-2018",
-		location: "Hong Kong"
-	});
-	e1.save();
-
-	var e2 = new Event({
-		eventName: "test2",
-		date: "2-9-2018",
-		location: "Taiwan"
-	})
-	e2.save();
 	u.save(function(err){
 		if(err)
 			res.send(err)
 		res.send("Account created! Login Id: "+req.body['loginId']);
 	});
-
 });
 
 app.post('/user',function(req,res){
