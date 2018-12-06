@@ -14,7 +14,7 @@ $(document).ready(function(){
     $('#loginButton').click(function(){
     	$.get("/user",function(data){
     		window.history.pushState(null, null, "/user");
-
+    		
 		    var newDoc = document.open("text/html", "replace");
 		    newDoc.write(data);
 		    newDoc.close();

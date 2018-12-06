@@ -32,7 +32,7 @@ var Event = mongoose.model('Event', EventSchema);
 
 //Get Post Delete
 
-//Create Account
+//Create Account(Try not to use test)
 app.post('/test',function(req,res){
 	var u = new User({
 		loginId: String(req.body['loginId']),
@@ -45,13 +45,28 @@ app.post('/test',function(req,res){
 	});
 });
 
-app.post('/user',function(req,res){
-	res.sendFile(__dirname + '/user.html');
-});
-
+//Change it to post later to get user information
 app.get('/user',function(req,res){
 	res.sendFile(__dirname + '/user.html');
 });
+
+//Get event from database(Possibly use post)
+app.get('/event',function(req,res)){
+    var tmp = '';
+    Event.find(function(err, results){
+    	results.forEach(function(element){
+    		tmp += '<li class="collection-item avatar"><i class="material-icons circle green">event</i><span class="title">'
+    		tmp += element.eventName + '</span><p>'
+    		tmp += element.date + '<br>'
+    		tmp += element.location + '</p><a href="#!" class="secondary-content"><i class="material-icons">grade</i></a></li>'
+    	});
+    	if(tmp == ''){
+    		res.send("No event!");
+    	}else{
+    		res.send(tmp);
+    	}
+    });
+}
 
 app.use('/', express.static(__dirname + '/'));
 
