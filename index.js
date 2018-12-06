@@ -51,7 +51,7 @@ app.get('/user',function(req,res){
 });
 
 //Get event from database(Possibly use post)
-app.get('/event',function(req,res)){
+app.get('/event',function(req,res){
     var tmp = '';
     Event.find(function(err, results){
     	results.forEach(function(element){
@@ -66,7 +66,7 @@ app.get('/event',function(req,res)){
     		res.send(tmp);
     	}
     });
-}
+});
 
 app.use('/', express.static(__dirname + '/'));
 
