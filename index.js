@@ -24,7 +24,8 @@ var UserSchema = new mongoose.Schema({
 var EventSchema = new mongoose.Schema({
 	eventName: {type: String, required: true},
 	date: {type: String, required: true},
-	location: {type: String, required: true}
+	location: {type: String, required: true},
+	description: {type: String, required: true}
 });
 
 var User = mongoose.model('User', UserSchema);
