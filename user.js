@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$('#eventList').append(data);
 	});
 
-	$('#eventList').click(){
+	$('#eventList').click(function(){
 		console.log($(this).attr('id'));
-	}
+	});
 });
