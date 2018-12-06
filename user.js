@@ -7,6 +7,7 @@ $(document).ready(function(){
 
 	$('.event').click(function(){
 		console.log($(this).attr('id'));
+		$('#modal2').modal();
 		$('#modal2').modal('open');
 	});
 });
