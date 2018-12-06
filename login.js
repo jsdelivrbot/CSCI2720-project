@@ -12,7 +12,7 @@ $(document).ready(function(){
     });
 
     $('#loginButton').click(function(){
-    	$.get("/user.html",function(data){
+    	$.get("/user",function(data){
     		window.history.pushState(null, null, "/user");
 
 		    var newDoc = document.open("text/html", "replace");
