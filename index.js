@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var async = require('async');
 var bcrypt = require('bcryptjs');
+var fs = require('fs');
 
 //Input Database here
 mongoose.connect('mongodb+srv://csci2720:2720@cluster0-n9g6h.mongodb.net/db2');
@@ -56,7 +57,7 @@ app.get('/event',function(req,res){
     var tmp = '';
     Event.find(function(err, results){
     	results.forEach(function(element){
-    		tmp += '<li class="collection-item avatar"><i class="material-icons circle green">event</i><span class="title">'
+    		tmp += '<li class="collection-item avatar"><i class="material-icons circle green">event</i><span class="title">'[0].organisationNameEnglish
     		tmp += element.eventName + '</span><p>'
     		tmp += element.date + '<br>'
     		tmp += element.location + '</p><a href="#!" class="secondary-content"><i class="material-icons">grade</i></a></li>'
@@ -67,6 +68,14 @@ app.get('/event',function(req,res){
     		res.send(tmp);
     	}
     });
+});
+
+app.get('/data',function(req,res){
+	var obj;
+	fs.readFile('data.json',function(err, data){
+		obj = JSON.parse(data);
+		res.send(obj.activities[0].organisationNameEnglish);
+	});
 });
 
 app.use('/', express.static(__dirname + '/'));
