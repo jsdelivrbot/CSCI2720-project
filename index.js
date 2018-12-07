@@ -95,12 +95,17 @@ app.get('/event',function(req,res){
 app.get('/data',function(req,res){
 	var obj;
 	fs.readFile('data.json',function(err, data){
-		var tmp='';
 		obj = JSON.parse(data);
 		obj.activities.forEach(function(result){
-			tmp += result.organisationNameEnglish + '<br>';
+			var e = new Event({
+				organisationName: result.organisationNameEnglish,
+				activityName: result.activityNameEnglish,
+				date: result.schedule[0].dateFrom,
+				location: result.districtNameEnglish,
+				charitable: result.charitable
+			});
+			e.save();
 		});
-		res.send(tmp);
 	});
 });
 
