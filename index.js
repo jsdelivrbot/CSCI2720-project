@@ -82,8 +82,7 @@ app.get('/event',function(req,res){
     		tmp += '<li class="collection-item avatar"><i class="material-icons circle green">event</i><span class="title">';
     		tmp += element.organisationName + '</span><p>';
     		tmp += element.activityName + '<br>';
-    		tmp += element.date + '<br>';
-    		tmp += element.location + '</p><a href="#!" class="secondary-content"><i class="material-icons">grade</i></a></li>'
+    		tmp += element.location + '<span style="float:right;">' + element.date + '</span></p><a href="#!" class="secondary-content"><i class="material-icons">grade</i></a></li>';
     	});
     	if(tmp == ''){
     		res.send("No event!");
