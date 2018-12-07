@@ -61,7 +61,7 @@ app.get('/user/check', function(req, res){
 			res.send(err);
 		}
 		if(result){
-			if(result.password == String(bcrypt.hashSync(req.body['pw'])){
+			if(result.password == String(bcrypt.hashSync(req.body['pw']))){
 				res.send("0"); // both id & pw is right
 			}
 			else { // id is right, not pw
