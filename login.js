@@ -11,13 +11,30 @@ $(document).ready(function(){
 		});
     });
 
+//Id & Pw check
     $('#loginButton').click(function(){
-    	$.get("/user",function(data){
+	    $.get("/user/check", {
+	    	id: $('#name').val(),
+		pw: $('#password').val()
+	    }, function(data){
+		    if (data == "0")
+			    alert("Login clear!")
+		    elif (data == "1")
+			    alert("Wrong password!")
+		    elif (data == "2")
+		    	    alert("Wrong Id!")
+		    else
+			    alert("Error!")
+			    
+	    	});
+	    
+    	/* $.get("/user",function(data){
     		window.history.pushState(null, null, "/user");
     		
 		    var newDoc = document.open("text/html", "replace");
 		    newDoc.write(data);
 		    newDoc.close();
+		    */
     	});
     });
 });
