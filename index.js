@@ -55,7 +55,8 @@ app.get('/user',function(req,res){
 //Login function, check id pw
 app.get('/user/check', function(req, res){
 	User.findOne({
-	loginId: req.body['id']},
+	loginId: String(req.body['id'])
+	},
 	function(err, result){
 		if(err){
 			res.send(err);
