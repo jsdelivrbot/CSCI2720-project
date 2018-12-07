@@ -54,7 +54,7 @@ app.get('/user',function(req,res){
 
 //Login function, check id pw
 app.get('/user/check', function(req, res){
-	res.send("From DB" + String(req.body['id']) + ", " + String(req.body['pw']));
+	res.send("From DB: " + req.body['id']) + ", " + req.body['pw']);
 	
 	/* User.findOne({
 	loginId: String(req.body['id'])
