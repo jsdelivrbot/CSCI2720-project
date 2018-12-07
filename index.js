@@ -54,7 +54,9 @@ app.get('/user',function(req,res){
 
 //Login function, check id pw
 app.get('/user/check', function(req, res){
-	User.findOne({
+	res.send(req.body['id'], ", ", req.body['pw']);
+	
+	/* User.findOne({
 	loginId: String(req.body['id'])
 	},
 	function(err, result){
@@ -72,7 +74,7 @@ app.get('/user/check', function(req, res){
 		else {//!result = no id matching in db
 		     res.send("2");
 		}
-	});
+	});*/
 });
 
 //Get event from database(Possibly use post)
