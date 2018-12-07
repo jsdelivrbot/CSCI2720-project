@@ -37,7 +37,7 @@ $(document).ready(function(){
 		    var newDoc = document.open("text/html", "replace");
 		    newDoc.write(data);
 		    newDoc.close();
-		    */
-    	});
+		    
+    	});*/
     });
 });
