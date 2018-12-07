@@ -95,8 +95,12 @@ app.get('/event',function(req,res){
 app.get('/data',function(req,res){
 	var obj;
 	fs.readFile('data.json',function(err, data){
+		var tmp='';
 		obj = JSON.parse(data);
-		res.send(obj.activities[0].organisationNameEnglish);
+		obj.activities.forEach(function(result){
+			tmp += result.organisationNameEnglish + '<br>';
+		});
+		res.send(tmp);
 	});
 });
 
