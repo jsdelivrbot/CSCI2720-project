@@ -27,8 +27,8 @@ $(document).ready(function(){
 		    	    alert("Wrong Id!");
 		    }
 		    else{
-			    alert($('#name').val(), ",", $('#password').val(), ",", data);
-			    console.log($('#name').val(), ", ", $('#password').val(), ", ", data);
+			    alert($('#name').val() + "," + $('#password').val() + "," + data);
+			    console.log($('#name').val() + ", " + $('#password').val()+ ", "+ data);
 		    }
 	    	});
 	    
