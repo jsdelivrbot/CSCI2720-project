@@ -21,12 +21,12 @@ var UserSchema = new mongoose.Schema({
     password: {type: String, required: true}
 });
 
-//The event schema is just temp, will change to real data later
 var EventSchema = new mongoose.Schema({
-	eventName: {type: String, required: true},
+	organisationName: {type: String, required: true},
+	activityName: {type: String, required: true},
 	date: {type: String, required: true},
 	location: {type: String, required: true},
-	description: {type: String, required: true}
+	charitable: {type: String, required: true}
 });
 
 var User = mongoose.model('User', UserSchema);
@@ -79,9 +79,10 @@ app.get('/event',function(req,res){
     var tmp = '';
     Event.find(function(err, results){
     	results.forEach(function(element){
-    		tmp += '<li class="collection-item avatar"><i class="material-icons circle green">event</i><span class="title">'
-    		tmp += element.eventName + '</span><p>'
-    		tmp += element.date + '<br>'
+    		tmp += '<li class="collection-item avatar"><i class="material-icons circle green">event</i><span class="title">';
+    		tmp += element.organisationName + '</span><p>';
+    		tmp += element.activityName + '<br>';
+    		tmp += element.date + '<br>';
     		tmp += element.location + '</p><a href="#!" class="secondary-content"><i class="material-icons">grade</i></a></li>'
     	});
     	if(tmp == ''){
