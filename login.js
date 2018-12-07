@@ -17,16 +17,16 @@ $(document).ready(function(){
 	    	id: $('#name').val(),
 		pw: $('#password').val()
 	    }, function(data){
-		    if (data == "0"):
+		    if (data == "0")
 			    alert("Login clear!");
 		    
-		    elif (data == "1"):
+		    elif (data == "1")
 			    alert("Wrong password!");
 		    
-		    elif (data == "2"):
+		    elif (data == "2")
 		    	    alert("Wrong Id!");
 		    
-		    else: 
+		    else
 			    alert("Error!")
 		    
 	    	});
