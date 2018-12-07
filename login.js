@@ -17,15 +17,18 @@ $(document).ready(function(){
 	    	id: $('#name').val(),
 		pw: $('#password').val()
 	    }, function(data){
-		    if (data == "0")
-			    alert("Login clear!")
-		    elif (data == "1")
-			    alert("Wrong password!")
-		    elif (data == "2")
-		    	    alert("Wrong Id!")
-		    else
+		    if (data == "0"){
+			    alert("Login clear!");
+		    }
+		    elif (data == "1"){
+			    alert("Wrong password!");
+		    }
+		    elif (data == "2"){
+		    	    alert("Wrong Id!");
+		    }
+		    else {
 			    alert("Error!")
-			    
+		    }
 	    	});
 	    
     	/* $.get("/user",function(data){
