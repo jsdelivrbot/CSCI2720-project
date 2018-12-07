@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var async = require('async');
 var bcrypt = require('bcryptjs');
+var fs = require('fs');
 
 //Input Database here
 mongoose.connect('mongodb+srv://csci2720:2720@cluster0-n9g6h.mongodb.net/db2');
@@ -90,6 +91,15 @@ app.get('/event',function(req,res){
     	}
     });
 });
+
+app.get('/data',function(req,res){
+	var obj;
+	fs.readFile('data.json',function(err, data){
+		obj = JSON.parse(data);
+		res.send(obj.activities[0].organisationNameEnglish);
+	});
+});
+
 
 app.use('/', express.static(__dirname + '/'));
 
