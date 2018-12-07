@@ -107,6 +107,7 @@ app.get('/data',function(req,res){
 			e.save();
 		});
 	});
+	res.send("Done!");
 });
 
 
